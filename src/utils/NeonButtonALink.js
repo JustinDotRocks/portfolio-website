@@ -1,15 +1,6 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
-// NeonButton = ({ title }) => {
-// 	return (
-// 		<div>
-// 			<NeonButton>{title}</NeonButton>
-// 		</div>
-// 	);
-// };
-
-const NeonButton = styled(Link)`
+const NeonButtonALink = styled.a`
 	font-size: 1.2em;
 	text-decoration: none;
 	margin: 1rem;
@@ -66,4 +57,4 @@ const NeonButton = styled(Link)`
 	}
 `;
 
-export default NeonButton;
+export default NeonButtonALink;

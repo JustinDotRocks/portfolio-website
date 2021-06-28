@@ -2,7 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 import CircleTechnology from '../utils/CircleTechnologies';
-import { StyledComponents } from '@styled-icons/simple-icons/StyledComponents';
+import NeonButton from '../utils/NeonButton';
+import { Chakraui } from '@styled-icons/simple-icons/Chakraui';
+import { ReactLogo } from '@styled-icons/boxicons-logos/ReactLogo';
+
+import { Typescript } from '@styled-icons/simple-icons/Typescript';
 
 import { Graphql } from '@styled-icons/simple-icons/Graphql';
 // import { Postgresql } from '@styled-icons/simple-icons/Postgresql';
@@ -13,29 +17,38 @@ import { Redis } from '@styled-icons/simple-icons/Redis';
 // import { Firebase } from '@styled-icons/simple-icons/Firebase';
 // import { Googlecloud } from '@styled-icons/simple-icons/Googlecloud';
 
-const BackEndTechnology = () => {
+import { Git } from '@styled-icons/boxicons-logos/Git';
+
+const ProjectsTechnology = () => {
 	return (
 		<div>
-			<BackendContainer>
-				<BackendTextContainer>
+			<ProjectsContainer id="projects-section">
+				<ProjectsTextContainer>
 					<h2>
-						<strong>Backend</strong> <br />
-						Technologies
+						Major Project <br /> <strong>OnPost: Posting App</strong>
 					</h2>
 					<p>
-						I'm a fullstack web developer living in Newfoundland Canada. My
-						developer journey navigated me through the parallels of html, css,
-						scss and javaScript. I shortly then after, picked up the ReactJS
-						library and pivoted into styled components from using standard css
-						and scss. I steered towards Redux and Redux Toolkit for state
-						handling, but veered in the direction of GraphQL soon after.
-						TypeScript was my next challenge, while I entered with caution, into
-						the backstreets of PostgreSQL for database management. I used
-						Apollo, TypeORM, node.js and next.js along the way. Redis was used
-						to store my cookies, and I used Chakra (styling) for the first time.
+						This web application, OnPost, is an online posting app where
+						individuals can login and post messages on the front page. You are
+						able to edit your own posts after posting and others can react to
+						your posts with multiple different reactions. OnPost is designed
+						using a multitude of technologies for the different aspects of the
+						application. OnPost was written in TypeScript and is driven by
+						ReactJS. Chakra was used for styling the front-end and the database
+						was created with PostgreSQL. Redis was used for storing our login
+						cookies to ensure only the owner of a post can edit it. GraphQL was
+						used to communicate between the front-end and the back-end of
+						OnPost.
+						{/* Apollo, TypeORM, node.js and next.js */}
 					</p>
-				</BackendTextContainer>
-				<BackEndCircleContainer>
+					<NeonButton title="OnPost" to="/">
+						Try OnPost
+					</NeonButton>
+					<NeonButton title="Projects" to="/projects">
+						Other Projects
+					</NeonButton>
+				</ProjectsTextContainer>
+				<ProjectsCircleContainer>
 					<CircleTechnology backend>
 						<div className="outer-circle"></div>
 						<div className="second-outer-circle"></div>
@@ -43,7 +56,24 @@ const BackEndTechnology = () => {
 						<div className="inner-circle"></div>
 						<div className="blue-circle"></div>
 						<div className="orange-circle"></div>
-						<RedisIconContainer className="position-1-icon" />
+
+						<TypescriptIconContainer className="position-5-icon" />
+						<ReactIconContainer className="position-4-icon" />
+
+						<ChakrauiIconContainer className="position-7-icon">
+							<ChakrauiIcon />
+						</ChakrauiIconContainer>
+						<GraphqlIconContainer className="position-3-icon" />
+						<NextjsIconContainer className="position-11-icon">
+							<svg viewBox="0 0 128 128">
+								<path d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64c11.2 0 21.7-2.9 30.8-7.9L48.4 55.3v36.6h-6.8V41.8h6.8l50.5 75.8C116.4 106.2 128 86.5 128 64c0-35.3-28.7-64-64-64zm22.1 84.6l-7.5-11.3V41.8h7.5v42.8z"></path>
+							</svg>
+						</NextjsIconContainer>
+						<ExpressIconContainer className="position-6-icon" />
+						<DockerIconContainer className="position-8-icon" />
+						<NodeIconContainer className="position-9-icon" />
+						<GitIconContainer className="position-1-icon" />
+						<RedisIconContainer className="position-10-icon" />
 						<PostgresqlIconContainer className="position-2-icon">
 							<svg viewBox="0 0 128 128">
 								<path d="M85.988 76.075c.632-5.262.443-6.034 4.362-5.182l.995.088c3.014.137 6.957-.485 9.272-1.561 4.986-2.313 7.942-6.177 3.026-5.162-11.215 2.313-11.986-1.483-11.986-1.483 11.843-17.571 16.794-39.875 12.521-45.335-11.654-14.892-31.828-7.85-32.166-7.667l-.108.021c-2.216-.461-4.695-.735-7.481-.78-5.075-.083-8.926 1.331-11.847 3.546 0 0-35.989-14.827-34.315 18.646.356 7.121 10.207 53.882 21.956 39.758 4.294-5.164 8.444-9.531 8.444-9.531 2.061 1.369 4.528 2.067 7.116 1.816l.2-.17c-.062.641-.035 1.268.081 2.01-3.027 3.383-2.137 3.977-8.189 5.222-6.122 1.262-2.525 3.508-.178 4.095 2.848.713 9.433 1.722 13.884-4.509l-.177.711c1.188.95 1.107 6.827 1.275 11.026.168 4.199.45 8.117 1.306 10.429.856 2.31 1.866 8.261 9.819 6.557 6.646-1.426 11.727-3.476 12.19-22.545"></path>
@@ -67,41 +97,7 @@ const BackEndTechnology = () => {
 									d="M84.371 117.744c1.014.624 2.496 1.144 4.056 1.144 2.314 0 3.666-1.222 3.666-2.99 0-1.638-.936-2.574-3.302-3.484-2.86-1.014-4.628-2.496-4.628-4.966 0-2.73 2.262-4.758 5.668-4.758 1.794 0 3.094.416 3.874.858l-.624 1.846c-.572-.312-1.742-.832-3.328-.832-2.392 0-3.302 1.43-3.302 2.626 0 1.638 1.065 2.444 3.484 3.38 2.964 1.145 4.472 2.574 4.472 5.148 0 2.704-2.002 5.044-6.136 5.044-1.69 0-3.536-.494-4.473-1.118l.573-1.898zM111.957 123.074c-2.366-.624-4.68-1.326-6.708-2.028-.364-.13-.728-.26-1.066-.26-4.16-.156-7.722-3.224-7.722-8.866 0-5.616 3.432-9.23 8.164-9.23 4.758 0 7.853 3.692 7.853 8.866 0 4.498-2.08 7.384-4.992 8.398v.104c1.742.442 3.64.858 5.122 1.118l-.651 1.898zm-1.872-11.414c0-3.51-1.819-7.125-5.538-7.125-3.822 0-5.694 3.536-5.668 7.333-.026 3.718 2.028 7.072 5.564 7.072 3.615 0 5.642-3.276 5.642-7.28zM115.414 102.976h2.263v15.626h7.488v1.898h-9.751v-17.524z"></path>
 							</svg>
 						</PostgresqlIconContainer>
-						<FirebaseIconContainer className="position-3-icon">
-							<svg viewBox="0 0 128 128">
-								<g>
-									{' '}
-									<path
-										fill="#f58220"
-										d="M11.4,115.62H8.25V91.22h14.25v3.01H11.4v8.02h10.04v2.93H11.42v10.44H11.4z"></path>{' '}
-									<path
-										fill="#f58220"
-										d="M27.92,94.74c-0.43,0.43-0.96,0.64-1.57,0.64c-0.61,0-1.15-0.21-1.57-0.64c-0.43-0.43-0.64-0.96-0.64-1.57 s0.21-1.15,0.64-1.57c0.43-0.43,0.96-0.64,1.57-0.64c0.61,0,1.15,0.21,1.57,0.64s0.64,0.96,0.64,1.57S28.34,94.28,27.92,94.74z M27.92,115.62h-3.14V98.92h3.14V115.62z"></path>{' '}
-									<path
-										fill="#f58220"
-										d="M34.47,115.62h-3.14V98.92h3.01v2.72h0.13c0.32-0.91,0.96-1.65,1.97-2.24c0.99-0.59,1.95-0.88,2.88-0.88 s1.71,0.13,2.34,0.4l-1.2,2.93c-0.4-0.16-0.96-0.24-1.68-0.24c-1.15,0-2.13,0.45-3.01,1.36c-0.88,0.91-1.31,2.08-1.31,3.52 V115.62z"></path>{' '}
-									<path
-										fill="#f58220"
-										d="M49.23,116.18c-2.53,0-4.58-0.85-6.15-2.53s-2.37-3.81-2.37-6.37c0-2.42,0.77-4.53,2.29-6.29 c1.55-1.76,3.49-2.64,5.89-2.64c2.48,0,4.45,0.8,5.94,2.42c1.49,1.63,2.24,3.78,2.24,6.47l-0.03,0.59H43.85 c0.08,1.68,0.67,3.01,1.68,4c1.04,0.99,2.24,1.47,3.62,1.47c2.24,0,3.78-0.96,4.58-2.88l2.8,1.17c-0.53,1.31-1.44,2.37-2.69,3.25 C52.59,115.73,51.04,116.18,49.23,116.18z M53.74,105.26c-0.08-0.96-0.51-1.87-1.31-2.72c-0.8-0.85-2-1.31-3.6-1.31 c-1.17,0-2.16,0.37-3.01,1.09c-0.85,0.72-1.44,1.71-1.76,2.93L53.74,105.26L53.74,105.26z"></path>{' '}
-									<path
-										fill="#f58220"
-										d="M68.1,116.18c-1.28,0-2.42-0.27-3.44-0.83c-1.01-0.53-1.76-1.23-2.26-2.05h-0.13v2.32h-3.01V91.22h3.14v7.7 l-0.13,2.32h0.13c0.51-0.83,1.25-1.49,2.26-2.05c1.01-0.53,2.16-0.83,3.44-0.83c2.16,0,4.02,0.85,5.6,2.56 c1.57,1.71,2.34,3.81,2.34,6.34s-0.77,4.64-2.34,6.34C72.12,115.33,70.26,116.18,68.1,116.18z M67.56,113.31 c1.47,0,2.72-0.56,3.76-1.65c1.04-1.09,1.57-2.56,1.57-4.37s-0.53-3.28-1.57-4.37c-1.04-1.09-2.29-1.65-3.76-1.65 s-2.74,0.53-3.76,1.63c-1.01,1.09-1.55,2.56-1.55,4.4c0,1.84,0.51,3.3,1.55,4.4C64.85,112.77,66.1,113.31,67.56,113.31z"></path>{' '}
-									<path
-										fill="#f58220"
-										d="M83.84,116.18c-1.79,0-3.25-0.51-4.45-1.55c-1.2-1.01-1.79-2.37-1.79-4.05c0-1.81,0.69-3.25,2.1-4.29 c1.41-1.04,3.14-1.55,5.22-1.55c1.84,0,3.36,0.35,4.53,1.01v-0.48c0-1.23-0.43-2.21-1.25-2.96c-0.85-0.75-1.87-1.12-3.09-1.12 c-0.91,0-1.73,0.21-2.48,0.64c-0.75,0.43-1.25,1.01-1.52,1.79l-2.88-1.23c0.4-1.01,1.15-1.92,2.29-2.77 c1.15-0.85,2.64-1.28,4.5-1.28c2.13,0,3.92,0.61,5.33,1.87c1.41,1.25,2.1,3.01,2.1,5.28v10.12h-3.01v-2.32h-0.13 C88.08,115.22,86.24,116.18,83.84,116.18z M84.35,113.31c1.31,0,2.48-0.48,3.52-1.44c1.07-0.96,1.6-2.1,1.6-3.44 c-0.88-0.72-2.21-1.09-4-1.09c-1.52,0-2.66,0.32-3.44,0.99c-0.77,0.67-1.17,1.44-1.17,2.32c0,0.83,0.35,1.47,1.07,1.95 C82.64,113.07,83.44,113.31,84.35,113.31z"></path>{' '}
-									<path
-										fill="#f58220"
-										d="M101.19,116.18c-1.87,0-3.41-0.45-4.61-1.36c-1.23-0.91-2.1-2.05-2.66-3.41l2.8-1.17 c0.88,2.1,2.4,3.14,4.53,3.14c0.99,0,1.79-0.21,2.4-0.64c0.61-0.43,0.93-1.01,0.93-1.71c0-1.09-0.77-1.84-2.29-2.21L98.9,108 c-1.07-0.27-2.08-0.8-3.04-1.55c-0.96-0.77-1.44-1.79-1.44-3.09c0-1.47,0.67-2.66,1.97-3.6c1.31-0.93,2.85-1.39,4.66-1.39 c1.47,0,2.8,0.35,3.94,1.01c1.17,0.67,2,1.63,2.48,2.88l-2.72,1.12c-0.61-1.47-1.89-2.21-3.81-2.21c-0.93,0-1.71,0.19-2.34,0.59 c-0.64,0.4-0.96,0.91-0.96,1.57c0,0.96,0.75,1.6,2.21,1.95l3.3,0.77c1.57,0.37,2.72,0.99,3.49,1.87 c0.75,0.88,1.12,1.89,1.12,3.01c0,1.49-0.61,2.74-1.84,3.76C104.71,115.7,103.13,116.18,101.19,116.18z"></path>{' '}
-									<path
-										fill="#f58220"
-										d="M117.58,116.18c-2.53,0-4.58-0.85-6.15-2.53c-1.57-1.68-2.37-3.81-2.37-6.37c0-2.42,0.77-4.53,2.29-6.29 c1.55-1.76,3.49-2.64,5.89-2.64c2.48,0,4.45,0.8,5.94,2.42c1.49,1.63,2.24,3.78,2.24,6.47l-0.03,0.59h-13.19 c0.08,1.68,0.67,3.01,1.68,4c1.04,0.99,2.24,1.47,3.62,1.47c2.24,0,3.78-0.96,4.58-2.88l2.8,1.17c-0.53,1.31-1.44,2.37-2.69,3.25 C120.93,115.73,119.39,116.18,117.58,116.18z M122.08,105.26c-0.08-0.96-0.51-1.87-1.31-2.72c-0.8-0.85-2-1.31-3.6-1.31 c-1.17,0-2.16,0.37-3.01,1.09c-0.85,0.72-1.44,1.71-1.76,2.93L122.08,105.26L122.08,105.26z"></path>{' '}
-									<path
-										fill="#f58220"
-										d="M39.25,59.42l7.69-49.28c0.27-1.68,2.52-2.08,3.31-0.57l8.26,15.47L39.25,59.42z M93.92,71.39 l-7.34-45.39c-0.22-1.41-1.99-1.99-3.01-0.97L37.35,71.39l25.59,14.36c1.59,0.88,3.58,0.88,5.17,0L93.92,71.39z M73.14,31.8 l-5.92-11.27c-0.66-1.28-2.47-1.28-3.14,0l-26.03,46.4L73.14,31.8z"></path>{' '}
-								</g>
-							</svg>
-						</FirebaseIconContainer>
-						<GooglecloudIconContainer className="position-4-icon">
+						<GooglecloudIconContainer className="position-12-icon">
 							<svg viewBox="0 0 128 128">
 								<g>
 									{' '}
@@ -120,37 +116,28 @@ const BackEndTechnology = () => {
 								</g>
 							</svg>
 						</GooglecloudIconContainer>
-						<GraphqlIconContainer className="position-5-icon" />
-						<NextjsIconContainer className="position-6-icon">
-							<svg viewBox="0 0 128 128">
-								<path d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64c11.2 0 21.7-2.9 30.8-7.9L48.4 55.3v36.6h-6.8V41.8h6.8l50.5 75.8C116.4 106.2 128 86.5 128 64c0-35.3-28.7-64-64-64zm22.1 84.6l-7.5-11.3V41.8h7.5v42.8z"></path>
-							</svg>
-						</NextjsIconContainer>
-						<ExpressIconContainer className="position-7-icon" />
-						<DockerIconContainer className="position-8-icon" />
-						<NodeIconContainer className="position-9-icon" />
 					</CircleTechnology>
-				</BackEndCircleContainer>
-			</BackendContainer>
+				</ProjectsCircleContainer>
+			</ProjectsContainer>
 		</div>
 	);
 };
 
-export default BackEndTechnology;
+export default ProjectsTechnology;
 
-const BackendContainer = styled.div`
-	background: linear-gradient(to right, white, rgba(51, 101, 138, 0.2));
+const ProjectsContainer = styled.a`
+	background: linear-gradient(to left, white, #33658a);
 	display: flex;
 	align-items: center;
 `;
 
-const BackendTextContainer = styled.div`
+const ProjectsTextContainer = styled.div`
 	margin: 2em 10em 2em 3em;
 	flex: 0.4;
 
 	> h2 {
 		font-size: 4em;
-		color: #33658a;
+		color: white;
 
 		> strong {
 			color: #f26419;
@@ -159,17 +146,41 @@ const BackendTextContainer = styled.div`
 
 	> p {
 		font-size: 1.2em;
+		margin-bottom: 2em;
+		color: white;
 	}
 `;
 
-const BackEndCircleContainer = styled.div`
+const ProjectsCircleContainer = styled.div`
 	flex: 0.6;
 	margin: 5em 10em 5em -20em;
 	height: 50vh;
 `;
 
+const ChakrauiIconContainer = styled.div`
+	width: 4em;
+	height: 4em;
+`;
+const ChakrauiIcon = styled(Chakraui)`
+	${Chakraui} {
+		color: #2cbcb4;
+	}
+`;
+
+const ReactIconContainer = styled(ReactLogo)`
+	${ReactLogo} {
+		color: #54d4fc;
+	}
+`;
+
+const TypescriptIconContainer = styled(Typescript)`
+	${Typescript} {
+		color: #047bcc;
+	}
+`;
+
 const GraphqlIconContainer = styled(Graphql)`
-	${StyledComponents} {
+	${Graphql} {
 		color: #e432ab;
 	}
 `;
@@ -200,12 +211,16 @@ const RedisIconContainer = styled(Redis)`
 	}
 `;
 
-const FirebaseIconContainer = styled.div``;
-
 const GooglecloudIconContainer = styled.div``;
 const NextjsIconContainer = styled.div`
 	> svg {
 		width: 4em;
 		height: 4em;
+	}
+`;
+
+const GitIconContainer = styled(Git)`
+	${Git} {
+		color: #f45434;
 	}
 `;

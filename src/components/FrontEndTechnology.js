@@ -25,14 +25,14 @@ const FrontEndTechnology = () => {
 						<div className="blue-circle"></div>
 						<div className="orange-circle"></div>
 						<JavascriptIconContainer className="position-1-icon" />
-						<Html5IconContainer className="position-2-icon" />
+						<Html5IconContainer className="position-8-icon" />
 						<TypescriptIconContainer className="position-3-icon" />
-						<Css3IconContainer className="position-4-icon" />
-						<ReactIconContainer className="position-5-icon" />
+						<Css3IconContainer className="position-5-icon" />
+						<ReactIconContainer className="position-2-icon" />
 						<SassIconContainer className="position-6-icon" />
-						<StyledComponentsIconContainer className="position-7-icon" />
-						<ReduxIconContainer className="position-8-icon" />
-						<ChakrauiIconContainer className="position-9-icon">
+						<StyledComponentsIconContainer className="position-4-icon" />
+						<ReduxIconContainer className="position-9-icon" />
+						<ChakrauiIconContainer className="position-7-icon">
 							<ChakrauiIcon />
 						</ChakrauiIconContainer>
 					</CircleTechnology>
@@ -55,30 +55,6 @@ const FrontEndTechnology = () => {
 					</p>
 				</FrontendTextContainer>
 			</FrontendContainer>
-			{/* <BackendContainer>
-					<BackendTextContainer>
-						<h2>Backend Technologies</h2>
-						<p>description</p>
-					</BackendTextContainer>
-					<CircleTechnology>
-						<div className="outer-circle"></div>
-						<div className="second-outer-circle"></div>
-						<div className="second-inner-circle"></div>
-						<div className="inner-circle"></div>
-					</CircleTechnology>
-				</BackendContainer>
-				<DevOpsContainer>
-					<DevOpsTextContainer>
-						<h2>Dev Ops Technologies</h2>
-						<p>description</p>
-					</DevOpsTextContainer>
-					<CircleTechnology>
-						<div className="outer-circle"></div>
-						<div className="second-outer-circle"></div>
-						<div className="second-inner-circle"></div>
-						<div className="inner-circle"></div>
-					</CircleTechnology>
-				</DevOpsContainer> */}
 		</div>
 	);
 };
@@ -86,7 +62,7 @@ const FrontEndTechnology = () => {
 export default FrontEndTechnology;
 
 const FrontendContainer = styled.div`
-	background: linear-gradient(to right, white, #e9fff9);
+	background: linear-gradient(to left, white, rgba(242, 100, 25));
 	display: flex;
 	margin-top: 5rem;
 	align-items: center;
@@ -115,14 +91,6 @@ const FrontEndCircleContainer = styled.div`
 	margin: 5em 30em 5em -20em;
 	height: 50vh;
 `;
-
-// const BackendContainer = styled.div``;
-
-// const BackendTextContainer = styled.div``;
-
-// const DevOpsContainer = styled.div``;
-
-// const DevOpsTextContainer = styled.div``;
 
 const StyledComponentsIconContainer = styled(StyledComponents)`
 	${StyledComponents} {

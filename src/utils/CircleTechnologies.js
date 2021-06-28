@@ -74,7 +74,7 @@ const CircleTechnology = styled.div`
 		background-color: #33658a;
 		/* box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1); */
 		position: absolute;
-		box-shadow: /*inset 0 0 0.75em 0 #f26419,*/ 0 0 0.75em 0 #33658a;
+		box-shadow: inset 0 0 0.75em 0 white, 0 0 0.75em 0 #33658a;
 
 		top: 50%;
 		left: 50%;
@@ -89,7 +89,7 @@ const CircleTechnology = styled.div`
 		height: 22em;
 		border-radius: 250px;
 		background-color: #f26419;
-		box-shadow: /*inset 0 0 0.75em 0 #f26419,*/ 0 0 0.75em 0 #f26419;
+		box-shadow: inset 0 0 0.75em 0 white, 0 0 0.75em 0 #f26419;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -131,7 +131,7 @@ const CircleTechnology = styled.div`
 
 		top: 50%;
 		left: 50%;
-		margin: 1em 0px 0px 12em;
+		margin: 1em 0px 0px 12.5em;
 
 		z-index: 2;
 
@@ -149,12 +149,20 @@ const CircleTechnology = styled.div`
 		background-color: white;
 		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
 		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
 		top: 50%;
 		left: 50%;
 		margin: 3em 0px 0px 23em;
 
 		z-index: 2;
+
+		> svg {
+			width: 4em;
+			height: 4em;
+		}
 	}
 
 	> .position-4-icon {
@@ -247,7 +255,7 @@ const CircleTechnology = styled.div`
 
 		top: 50%;
 		left: 50%;
-		margin: 24em 0px 0px 12em;
+		margin: 24em 0px 0px 12.5em;
 
 		z-index: 2;
 	}
@@ -267,6 +275,227 @@ const CircleTechnology = styled.div`
 		left: 50%;
 		margin: 22em 0px 0px 23em;
 		z-index: 2;
+	}
+
+	> .position-10-icon {
+		border: 1px solid transparent;
+		width: 5em;
+		height: 5em;
+		border-radius: 250px;
+		background-color: white;
+		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 50%;
+		left: 50%;
+		margin: 28em 0px 0px 29em;
+		z-index: 2;
+	}
+
+	> .position-11-icon {
+		border: 1px solid transparent;
+		width: 5em;
+		height: 5em;
+		border-radius: 250px;
+		background-color: white;
+		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 50%;
+		left: 50%;
+		margin: 13em 0px 0px 35em;
+		z-index: 2;
+	}
+
+	> .position-12-icon {
+		border: 1px solid transparent;
+		width: 5em;
+		height: 5em;
+		border-radius: 250px;
+		background-color: white;
+		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 50%;
+		left: 50%;
+		margin: -4em 0px 0px 27em;
+		z-index: 2;
+	}
+
+	> .footer-position-1-icon {
+		border: 1px solid transparent;
+		width: 5em;
+		height: 5em;
+		border-radius: 250px;
+		background-color: white;
+		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+		/* position: absolute; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* top: 50%;
+		left: 50%; */
+		/* margin: 0em 0px 0px 1em; */
+		z-index: 4;
+	}
+
+	> .footer-position-2-icon {
+		border: 1px solid transparent;
+		width: 5em;
+		height: 5em;
+		border-radius: 250px;
+		background-color: white;
+		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+		/* position: absolute; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* top: 50%;
+		left: 50%; */
+		/* margin: -4em 0px 0px 27em; */
+		z-index: 4;
+	}
+
+	> .footer-position-3-icon {
+		border: 1px solid transparent;
+		width: 5em;
+		height: 5em;
+		border-radius: 250px;
+		background-color: white;
+		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+		/* position: absolute; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* top: 50%;
+		left: 50%; */
+		/* margin: -4em 0px 0px 27em; */
+		z-index: 4;
+	}
+
+	> .footer-position-4-icon {
+		border: 1px solid transparent;
+		width: 5em;
+		height: 5em;
+		border-radius: 250px;
+		background-color: white;
+		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+		/* position: absolute; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* top: 50%;
+		left: 50%; */
+		/* margin: -4em 0px 0px 27em; */
+		z-index: 4;
+	}
+
+	> .footer-position-5-icon {
+		border: 1px solid transparent;
+		width: 5em;
+		height: 5em;
+		border-radius: 250px;
+		background-color: white;
+		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+		/* position: absolute; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* top: 50%;
+		left: 50%; */
+		/* margin: -4em 0px 0px 27em; */
+		z-index: 4;
+	}
+
+	> .footer-position-6-icon {
+		border: 1px solid transparent;
+		width: 5em;
+		height: 5em;
+		border-radius: 250px;
+		background-color: white;
+		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+		/* position: absolute; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* top: 50%;
+		left: 50%; */
+		/* margin: -4em 0px 0px 27em; */
+		z-index: 4;
+	}
+
+	> .footer-position-7-icon {
+		border: 1px solid transparent;
+		width: 5em;
+		height: 5em;
+		border-radius: 250px;
+		background-color: white;
+		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+		/* position: absolute; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* top: 50%;
+		left: 50%; */
+		/* margin: -4em 0px 0px 27em; */
+		z-index: 4;
+	}
+
+	> .footer-position-7-icon {
+		border: 1px solid transparent;
+		width: 5em;
+		height: 5em;
+		border-radius: 250px;
+		background-color: white;
+		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+		/* position: absolute; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* top: 50%;
+		left: 50%; */
+		/* margin: -4em 0px 0px 27em; */
+		z-index: 4;
+	}
+
+	> .footer-position-8-icon {
+		border: 1px solid transparent;
+		width: 5em;
+		height: 5em;
+		border-radius: 250px;
+		background-color: white;
+		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+		/* position: absolute; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* top: 50%;
+		left: 50%; */
+		/* margin: -4em 0px 0px 27em; */
+		z-index: 4;
+	}
+
+	> .footer-position-9-icon {
+		border: 1px solid transparent;
+		width: 5em;
+		height: 5em;
+		border-radius: 250px;
+		background-color: white;
+		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+		/* position: absolute; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* top: 50%;
+		left: 50%; */
+		/* margin: -4em 0px 0px 27em; */
+		z-index: 4;
 	}
 `;
 
