@@ -28,25 +28,33 @@ const ProjectsTechnology = () => {
 						Major Project <br /> <strong>OnPost: Posting App</strong>
 					</h2>
 					<p>
-						This web application, OnPost, is an online posting app where
-						individuals can login and post messages on the front page. You are
-						able to edit your own posts after posting and others can react to
-						your posts with multiple different reactions. OnPost is designed
-						using a multitude of technologies for the different aspects of the
-						application. OnPost was written in TypeScript and is driven by
-						ReactJS. Chakra was used for styling the front-end and the database
-						was created with PostgreSQL. Redis was used for storing our login
-						cookies to ensure only the owner of a post can edit it. GraphQL was
-						used to communicate between the front-end and the back-end of
-						OnPost.
-						{/* Apollo, TypeORM, node.js and next.js */}
+						An online posting app. Login and post messages. Edit your own posts
+						and react to other posts.
+						<br />
+						Written using TypeScript, ReactJS and Next.js.
+						<br />
+						ChakraUI was used for styling the front-end.
+						<br />
+						PostgreSQL and TypeORM were used to create the database. Redis was
+						used for storing login cookies.
+						<br />
+						GraphQL with Apollo and Node.js were used to communicate between the
+						front-end and the back-end.
+						<br />
+						Deployed using App Engine, and CloudSQL from Google Cloud Platform.
 					</p>
-					<NeonButton title="OnPost" to="/">
-						Try OnPost
-					</NeonButton>
-					<NeonButton title="Projects" to="/projects">
-						Other Projects
-					</NeonButton>
+					<MajorProjectButtonsContainer>
+						<TryOnPostButtonContainer>
+							<NeonButton title="OnPost" to="/">
+								Try OnPost
+							</NeonButton>
+						</TryOnPostButtonContainer>
+						<ProjectsButtonContainer>
+							<NeonButton title="Projects" to="/projects">
+								Other Projects
+							</NeonButton>
+						</ProjectsButtonContainer>
+					</MajorProjectButtonsContainer>
 				</ProjectsTextContainer>
 				<ProjectsCircleContainer>
 					<CircleTechnology backend>
@@ -64,13 +72,13 @@ const ProjectsTechnology = () => {
 							<ChakrauiIcon />
 						</ChakrauiIconContainer>
 						<GraphqlIconContainer className="position-3-icon" />
-						<NextjsIconContainer className="position-11-icon">
+						<NextjsIconContainer className="position-8-icon">
 							<svg viewBox="0 0 128 128">
 								<path d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64c11.2 0 21.7-2.9 30.8-7.9L48.4 55.3v36.6h-6.8V41.8h6.8l50.5 75.8C116.4 106.2 128 86.5 128 64c0-35.3-28.7-64-64-64zm22.1 84.6l-7.5-11.3V41.8h7.5v42.8z"></path>
 							</svg>
 						</NextjsIconContainer>
 						<ExpressIconContainer className="position-6-icon" />
-						<DockerIconContainer className="position-8-icon" />
+						{/* <DockerIconContainer className="position-8-icon" /> */}
 						<NodeIconContainer className="position-9-icon" />
 						<GitIconContainer className="position-1-icon" />
 						<RedisIconContainer className="position-10-icon" />
@@ -129,15 +137,73 @@ const ProjectsContainer = styled.a`
 	background: linear-gradient(to left, white, #33658a);
 	display: flex;
 	align-items: center;
+	height: 120vh;
+
+	@media (max-width: 1250px) {
+		flex-direction: column;
+		justify-content: center;
+		height: 180vh;
+		background: linear-gradient(to top, white, #33658a);
+	}
+	@media (max-width: 800px) {
+		height: 200vh;
+	}
+	@media (max-width: 650px) {
+		height: 180vh;
+	}
+	@media (max-width: 400px) {
+		margin-top: 20em;
+		height: 150vh;
+	}
 `;
 
+const MajorProjectButtonsContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	@media (max-width: 400px) {
+		font-size: 0.75em;
+		margin-left: 1.75em;
+	}
+`;
+
+const TryOnPostButtonContainer = styled.div`
+	margin-right: 3em;
+`;
+
+const ProjectsButtonContainer = styled.div``;
+
 const ProjectsTextContainer = styled.div`
-	margin: 2em 10em 2em 3em;
 	flex: 0.4;
+	margin: 0em 3em 0em 5em;
+
+	@media (max-width: 1750px) {
+		margin: 0em 3em 0em 3em;
+	}
+	@media (max-width: 1250px) {
+		margin: 3em 7em 0em 7em;
+		align-items: center;
+	}
+	@media (max-width: 650px) {
+		margin: 3em 4em 0em 4em;
+	}
+	@media (max-width: 560px) {
+		margin: 3em 1em 0em 1em;
+	}
+	@media (max-width: 450px) {
+		margin: 3em 0.5em 0em 0.5em;
+	}
+	@media (max-width: 400px) {
+		margin: 10em 0em 0em 0em;
+	}
 
 	> h2 {
 		font-size: 4em;
 		color: white;
+		@media (max-width: 400px) {
+			font-size: 3em;
+			margin-left: 0.5em;
+		}
 
 		> strong {
 			color: #f26419;
@@ -148,13 +214,41 @@ const ProjectsTextContainer = styled.div`
 		font-size: 1.2em;
 		margin-bottom: 2em;
 		color: white;
+
+		@media (max-width: 400px) {
+			margin: 1em 1em 2em 1em;
+		}
 	}
 `;
 
 const ProjectsCircleContainer = styled.div`
 	flex: 0.6;
-	margin: 5em 10em 5em -20em;
-	height: 50vh;
+	margin-right: 7em;
+
+	@media (max-width: 1750px) {
+		margin: 0em 20em 0em -15em;
+	}
+
+	@media (max-width: 1250px) {
+		margin: 25em 60em 0em -15em;
+	}
+	@media (max-width: 850px) {
+		margin: 25em 65em 25em -14em;
+	}
+	@media (max-width: 750px) {
+		margin: 25em 62em 0em -14em;
+	}
+	@media (max-width: 650px) {
+		margin: 25em 56em 0em -14em;
+	}
+
+	@media (max-width: 560px) {
+		margin: 25em 53em 0em -10em;
+	}
+	@media (max-width: 400px) {
+		flex: 0.4;
+		margin: 18em 49em 20em -10em;
+	}
 `;
 
 const ChakrauiIconContainer = styled.div`
@@ -162,6 +256,8 @@ const ChakrauiIconContainer = styled.div`
 	height: 4em;
 `;
 const ChakrauiIcon = styled(Chakraui)`
+	width: 4em;
+	height: 4em;
 	${Chakraui} {
 		color: #2cbcb4;
 	}
@@ -174,6 +270,8 @@ const ReactIconContainer = styled(ReactLogo)`
 `;
 
 const TypescriptIconContainer = styled(Typescript)`
+	width: 3.5em;
+	height: 3.5em;
 	${Typescript} {
 		color: #047bcc;
 	}
@@ -187,11 +285,11 @@ const GraphqlIconContainer = styled(Graphql)`
 
 const PostgresqlIconContainer = styled.div``;
 
-const DockerIconContainer = styled(Docker)`
-	${Docker} {
-		color: #2394ec;
-	}
-`;
+// const DockerIconContainer = styled(Docker)`
+// 	${Docker} {
+// 		color: #2394ec;
+// 	}
+// `;
 
 const ExpressIconContainer = styled(Express)`
 	${Express} {

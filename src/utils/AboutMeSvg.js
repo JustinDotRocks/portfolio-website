@@ -10,7 +10,7 @@ import FoodSvg from '../img/illustrations/food.svg';
 import CoffeeSvg from '../img/illustrations/coffee-cup.svg';
 import ScienceSvg from '../img/illustrations/solar-system.svg';
 
-const HeroSvgComponent = () => {
+const AboutMeSvgComponent = () => {
 	return (
 		<SVGContainer>
 			<AboutMeIconsContainer>
@@ -63,31 +63,79 @@ const HeroSvgComponent = () => {
 	);
 };
 
-export default HeroSvgComponent;
+export default AboutMeSvgComponent;
 
-const SVGContainer = styled.div``;
+const SVGContainer = styled.div`
+	position: relative;
+
+	@media (max-width: 1600px) {
+		margin: 0em 0em 0em -9em;
+	}
+	@media (max-width: 1150px) {
+		margin: 0em 0em 0em -17em;
+	}
+	/* @media (max-width: 700px) {
+		margin: -11em 0em 10em -17em;
+	} */
+`;
+
+const AboutMeImageContainer = styled.div`
+	> img {
+		position: absolute;
+		height: 20em;
+		width: 20em;
+		top: 15em;
+		left: 20em;
+
+		@media (max-width: 1250px) {
+			height: 16em;
+			width: 16em;
+			top: 17em;
+			left: 23em;
+		}
+	}
+`;
 
 const BlueBlobSVGContainer = styled.div`
 	transform: rotate(25deg);
+	/* position: absolute; */
+	@media (max-width: 1250px) {
+		margin: 0em 0em -3em 10em;
+	}
 
 	> svg {
 		margin-bottom: -36em;
 		margin-left: 8em;
+
+		@media (max-width: 1250px) {
+			height: 40em;
+			width: 40em;
+		}
 	}
 `;
 
 const OrangeBlobSVGContainer = styled.div`
 	transform: rotate(-10deg);
+	/* position: absolute; */
+
+	@media (max-width: 1250px) {
+		margin: 0em 10em 0em 10em;
+	}
 
 	> svg {
 		z-index: 2;
+
+		@media (max-width: 1250px) {
+			height: 40em;
+			width: 40em;
+		}
 	}
 `;
 
 const AboutMeIconsContainer = styled.div`
 	height: 5em;
 	width: 5em;
-	position: relative;
+	/* position: relative; */
 
 	> #plantIcon {
 		position: absolute;
@@ -95,6 +143,13 @@ const AboutMeIconsContainer = styled.div`
 		width: 8em;
 		top: 10em;
 		left: 45em;
+
+		@media (max-width: 1250px) {
+			height: 5em;
+			width: 5em;
+			top: 13em;
+			left: 38em;
+		}
 	}
 
 	> #mineralIcon {
@@ -103,6 +158,13 @@ const AboutMeIconsContainer = styled.div`
 		width: 8em;
 		top: 5em;
 		left: 10em;
+
+		@media (max-width: 1250px) {
+			height: 5em;
+			width: 5em;
+			top: 11em;
+			left: 19em;
+		}
 	}
 
 	> #soccerIcon {
@@ -111,6 +173,13 @@ const AboutMeIconsContainer = styled.div`
 		width: 8em;
 		top: 25em;
 		left: 10em;
+
+		@media (max-width: 1250px) {
+			height: 5em;
+			width: 5em;
+			top: 24em;
+			left: 18em;
+		}
 	}
 
 	> #coffeeIcon {
@@ -119,6 +188,13 @@ const AboutMeIconsContainer = styled.div`
 		width: 8em;
 		top: 35em;
 		left: 45em;
+
+		@media (max-width: 1250px) {
+			height: 5em;
+			width: 5em;
+			top: 30em;
+			left: 40em;
+		}
 	}
 
 	> #computerIcon {
@@ -127,6 +203,13 @@ const AboutMeIconsContainer = styled.div`
 		width: 4em;
 		top: 38em;
 		left: 25em;
+
+		@media (max-width: 1250px) {
+			height: 5em;
+			width: 5em;
+			top: 33em;
+			left: 24em;
+		}
 	}
 
 	> #foodIcon {
@@ -135,6 +218,13 @@ const AboutMeIconsContainer = styled.div`
 		width: 5em;
 		top: 25em;
 		left: 45em;
+
+		@media (max-width: 1250px) {
+			height: 5em;
+			width: 5em;
+			top: 23em;
+			left: 42em;
+		}
 	}
 
 	> #scienceIcon {
@@ -144,13 +234,12 @@ const AboutMeIconsContainer = styled.div`
 		top: 5em;
 		left: 30em;
 		color: red;
-	}
-`;
 
-const AboutMeImageContainer = styled.div`
-	position: absolute;
-	height: 20em;
-	width: 20em;
-	top: 15em;
-	left: 22em;
+		@media (max-width: 1250px) {
+			height: 4em;
+			width: 4em;
+			top: 8em;
+			left: 30em;
+		}
+	}
 `;

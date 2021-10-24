@@ -1,25 +1,35 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const NeonButtonALink = styled.a`
+// NeonButton = ({ title }) => {
+// 	return (
+// 		<div>
+// 			<NeonButton>{title}</NeonButton>
+// 		</div>
+// 	);
+// };
+
+const NeonButtonBlue = styled(Link)`
 	font-size: 1.2em;
 	text-decoration: none;
-	/* margin: 1rem; */
+	margin: 1rem;
 	//width: 100%;
-	background-color: #f26419;
+	padding: 0.25rem;
+	background-color: #33658a;
 	color: white;
 	cursor: pointer;
-	border: #f26419 0.225em solid;
+	border: #33658a 0.225em solid;
 	border-radius: 1em;
 	padding: 0.25em 1em;
 	text-shadow: 0 0 0.25em hsl(0 0% 100% / 0.5), 0 0 0.45em currentColor;
-	box-shadow: inset 0 0 0.75em 0 #f26419, 0 0 0.75em 0 #f26419;
+	box-shadow: inset 0 0 0.75em 0 #33658a, 0 0 0.75em 0 #33658a;
 	position: relative;
 
 	&:before {
 		pointer-events: none; // wont trigger on the bottom shadow now.
 		content: '';
 		position: absolute;
-		background-color: #f26419;
+		background-color: #33658a;
 		top: 120%;
 		left: 0;
 		width: 100%;
@@ -37,7 +47,7 @@ const NeonButtonALink = styled.a`
 		right: 0;
 		left: 0;
 		border-radius: 1em;
-		box-shadow: 0 0 2em 0.5em #f26419;
+		box-shadow: 0 0 2em 0.5em #33658a;
 		opacity: 0;
 		transition: opacity 100ms linear;
 	}
@@ -56,4 +66,4 @@ const NeonButtonALink = styled.a`
 	}
 `;
 
-export default NeonButtonALink;
+export default NeonButtonBlue;

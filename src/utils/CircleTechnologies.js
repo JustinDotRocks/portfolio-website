@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 const CircleTechnology = styled.div`
 	position: relative;
+	@media (max-width: 560px) {
+		/* margin-right: 10em; */
+	}
 
 	> .outer-circle {
 		border: 1px solid transparent;
@@ -10,13 +13,25 @@ const CircleTechnology = styled.div`
 		border-radius: 250px;
 		background-color: white;
 		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
-		position: absolute;
-
-		top: 50%;
-		left: 50%;
-		//margin: -10em 0px 0px -10em;
-
 		z-index: 2;
+
+		position: absolute;
+		top: -12em;
+		left: 20em;
+
+		/* @media (max-width: 650px) {
+			width: 24em;
+			height: 24em;
+		} */
+
+		@media (max-width: 650px) {
+			width: 23em;
+			height: 23em;
+		}
+		@media (max-width: 450px) {
+			width: 19em;
+			height: 19em;
+		}
 	}
 
 	> .second-outer-circle {
@@ -26,13 +41,20 @@ const CircleTechnology = styled.div`
 		border-radius: 250px;
 		background-color: white;
 		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+		z-index: 3;
+
 		position: absolute;
+		top: -8em;
+		left: 24em;
 
-		top: 50%;
-		left: 50%;
-		margin: 4em 0px 0px 4em;
-
-		z-index: 2;
+		@media (max-width: 650px) {
+			width: 15em;
+			height: 15em;
+		}
+		@media (max-width: 450px) {
+			width: 11em;
+			height: 11em;
+		}
 	}
 
 	> .second-inner-circle {
@@ -42,13 +64,24 @@ const CircleTechnology = styled.div`
 		border-radius: 250px;
 		background-color: white;
 		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+		z-index: 4;
 		position: absolute;
+		top: -4.5em;
+		left: 27.5em;
 
-		top: 50%;
-		left: 50%;
-		margin: 7.5em 0px 0px 7.5em;
-
-		z-index: 2;
+		/* @media (max-width: 650px) {
+			width: 9em;
+			height: 9em;
+			
+		} */
+		@media (max-width: 650px) {
+			width: 8em;
+			height: 8em;
+		}
+		@media (max-width: 450px) {
+			width: 4em;
+			height: 4em;
+		}
 	}
 
 	> .inner-circle {
@@ -58,13 +91,16 @@ const CircleTechnology = styled.div`
 		border-radius: 250px;
 		background-color: white;
 		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+		z-index: 5;
+
 		position: absolute;
+		top: -1em;
+		left: 31em;
 
-		top: 50%;
-		left: 50%;
-		margin: 11em 0px 0px 11em;
-
-		z-index: 2;
+		@media (max-width: 650px) {
+			width: 0em;
+			height: 0em;
+		}
 	}
 
 	> .blue-circle {
@@ -73,15 +109,31 @@ const CircleTechnology = styled.div`
 		border-radius: 250px;
 		background-color: #33658a;
 		/* box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1); */
+		box-shadow: inset 0 0 0.75em 0 white /*, 0 0 0.75em 0 #33658a*/;
 		position: absolute;
-		box-shadow: inset 0 0 0.75em 0 white, 0 0 0.75em 0 #33658a;
 
-		top: 50%;
-		left: 50%;
-		margin: ${props =>
-			props.backend ? '-2em 0em 0em 8em ' : '-2em 0px 0px 0em'};
+		top: ${props => (props.frontend || props.devops ? '1em' : '1em ')};
+		left: ${props => (props.frontend || props.devops ? '13em' : '35em ')};
 
 		z-index: 1;
+		/* @media (max-width: 650px) {
+			width: 15em;
+			height: 15em;
+			top: ${props => (props.frontend || props.devops ? '-2em' : '-2em ')};
+			left: ${props => (props.frontend || props.devops ? '18em' : '31em ')}; 
+		} */
+		@media (max-width: 650px) {
+			width: 13em;
+			height: 13em;
+			top: ${props => (props.frontend || props.devops ? '-2em' : '-2em ')};
+			left: ${props => (props.frontend || props.devops ? '18em' : '31em ')};
+		}
+		@media (max-width: 450px) {
+			width: 9em;
+			height: 9em;
+			top: ${props => (props.frontend || props.devops ? '-2em' : '-2em ')};
+			left: ${props => (props.frontend || props.devops ? '18em' : '31em ')};
+		}
 	}
 
 	> .orange-circle {
@@ -89,13 +141,31 @@ const CircleTechnology = styled.div`
 		height: 22em;
 		border-radius: 250px;
 		background-color: #f26419;
-		box-shadow: inset 0 0 0.75em 0 white, 0 0 0.75em 0 #f26419;
+		box-shadow: inset 0 0 0.75em 0 white;
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin: ${props =>
-			props.backend ? '10em 0px 0px 9em ' : '10em 0px 0px -1em'};
+
+		top: ${props => (props.frontend || props.devops ? '-15em' : '-15em ')};
+		left: ${props => (props.frontend || props.devops ? '13em' : '35em ')};
 		z-index: 1;
+
+		/* @media (max-width: 650px) {
+			width: 15em;
+			height: 15em;
+			top: ${props => (props.frontend || props.devops ? '-13em' : '-13em ')};
+			left: ${props => (props.frontend || props.devops ? '18em' : '31em ')}; 
+		} */
+		@media (max-width: 650px) {
+			width: 13em;
+			height: 13em;
+			top: ${props => (props.frontend || props.devops ? '-13em' : '-13em ')};
+			left: ${props => (props.frontend || props.devops ? '18em' : '31em ')};
+		}
+		@media (max-width: 450px) {
+			width: 9em;
+			height: 9em;
+			top: ${props => (props.frontend || props.devops ? '-13em' : '-13em ')};
+			left: ${props => (props.frontend || props.devops ? '18em' : '31em ')};
+		}
 	}
 
 	> .position-1-icon {
@@ -105,16 +175,24 @@ const CircleTechnology = styled.div`
 		border-radius: 250px;
 		background-color: white;
 		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
+
 		position: absolute;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		top: -10em;
+		left: 22em;
 
-		top: 50%;
-		left: 50%;
-		margin: 3em 0px 0px 2em;
+		z-index: 5;
 
-		z-index: 2;
+		@media (max-width: 650px) {
+			width: 4em;
+			height: 4em;
+			top: -10em;
+			left: 21em;
+			/* margin: 1em 0px 0px 1em; */
+		}
+		@media (max-width: 450px) {
+			width: 3em;
+			height: 3em;
+		}
 	}
 
 	> .position-2-icon {
@@ -129,15 +207,34 @@ const CircleTechnology = styled.div`
 		justify-content: center;
 		align-items: center;
 
-		top: 50%;
-		left: 50%;
-		margin: 1em 0px 0px 12.5em;
+		top: -14.5em;
+		left: 32.5em;
+		/* margin: 1em 0px 0px 12.5em; */
 
-		z-index: 2;
+		z-index: 5;
+
+		@media (max-width: 650px) {
+			width: 4em;
+			height: 4em;
+			top: -13.5em;
+			left: 29.5em;
+			/* margin: -1em 0px 0px 10em; */
+		}
+		@media (max-width: 450px) {
+			width: 3em;
+			height: 3em;
+			top: -13.5em;
+			left: 28em;
+		}
 
 		> svg {
 			width: 4em;
 			height: 4em;
+
+			@media (max-width: 650px) {
+				width: 3.2em;
+				height: 3.2em;
+			}
 		}
 	}
 
@@ -153,15 +250,34 @@ const CircleTechnology = styled.div`
 		align-items: center;
 		justify-content: center;
 
-		top: 50%;
-		left: 50%;
-		margin: 3em 0px 0px 23em;
+		top: -10em;
+		left: 43em;
+		/* margin: 3em 0px 0px 23em; */
 
-		z-index: 2;
+		z-index: 5;
+
+		@media (max-width: 650px) {
+			width: 4em;
+			height: 4em;
+			top: -10em;
+			left: 38em;
+			/* margin: 1em 0px 0px 19.5em; */
+		}
+		@media (max-width: 450px) {
+			width: 3em;
+			height: 3em;
+			top: -9.5em;
+			left: 36em;
+		}
 
 		> svg {
 			width: 4em;
 			height: 4em;
+
+			@media (max-width: 650px) {
+				width: 3em;
+				height: 3em;
+			}
 		}
 	}
 
@@ -177,11 +293,24 @@ const CircleTechnology = styled.div`
 		justify-content: center;
 		align-items: center;
 
-		top: 50%;
-		left: 50%;
-		margin: 13em 0px 0px 2em;
+		top: 0.5em;
+		left: 17.5em;
+		/* margin: 13em 0px 0px 2em; */
 
-		z-index: 2;
+		z-index: 5;
+
+		@media (max-width: 650px) {
+			width: 4em;
+			height: 4em;
+			top: -2.5em;
+			left: 18.5em;
+		}
+		@media (max-width: 450px) {
+			width: 3em;
+			height: 3em;
+			top: -4em;
+			left: 18.5em;
+		}
 	}
 
 	> .position-5-icon {
@@ -196,11 +325,24 @@ const CircleTechnology = styled.div`
 		justify-content: center;
 		align-items: center;
 
-		top: 50%;
-		left: 50%;
-		margin: 12.5em 0px 0px 12.5em;
+		top: 0.5em;
+		left: 32.5em;
+		/* margin: 12.5em 0px 0px 12.5em; */
 
-		z-index: 2;
+		z-index: 5;
+
+		@media (max-width: 650px) {
+			width: 4em;
+			height: 4em;
+			top: -2.5em;
+			left: 29.5em;
+		}
+		@media (max-width: 450px) {
+			width: 3em;
+			height: 3em;
+			top: -4em;
+			left: 28em;
+		}
 	}
 
 	> .position-6-icon {
@@ -215,11 +357,24 @@ const CircleTechnology = styled.div`
 		justify-content: center;
 		align-items: center;
 
-		top: 50%;
-		left: 50%;
-		margin: 13em 0px 0px 23em;
+		top: 0.5em;
+		left: 47.5em;
+		/* margin: 13em 0px 0px 23em; */
 
-		z-index: 2;
+		z-index: 5;
+
+		@media (max-width: 650px) {
+			width: 4em;
+			height: 4em;
+			top: -2.5em;
+			left: 41em;
+		}
+		@media (max-width: 450px) {
+			width: 3em;
+			height: 3em;
+			top: -4em;
+			left: 37.5em;
+		}
 	}
 
 	> .position-7-icon {
@@ -234,11 +389,24 @@ const CircleTechnology = styled.div`
 		justify-content: center;
 		align-items: center;
 
-		top: 50%;
-		left: 50%;
-		margin: 22em 0px 0px 2em;
+		top: 11em;
+		left: 22em;
+		/* margin: 22em 0px 0px 2em; */
 
-		z-index: 2;
+		z-index: 5;
+
+		@media (max-width: 650px) {
+			width: 4em;
+			height: 4em;
+			top: 5em;
+			left: 21em;
+		}
+		@media (max-width: 450px) {
+			width: 3em;
+			height: 3em;
+			top: 2em;
+			left: 21em;
+		}
 	}
 
 	> .position-8-icon {
@@ -253,11 +421,24 @@ const CircleTechnology = styled.div`
 		justify-content: center;
 		align-items: center;
 
-		top: 50%;
-		left: 50%;
-		margin: 24em 0px 0px 12.5em;
+		top: 15.5em;
+		left: 32.5em;
+		/* margin: 24em 0px 0px 12.5em; */
 
-		z-index: 2;
+		z-index: 5;
+
+		@media (max-width: 650px) {
+			width: 4em;
+			height: 4em;
+			top: 9em;
+			left: 29.5em;
+		}
+		@media (max-width: 450px) {
+			width: 3em;
+			height: 3em;
+			top: 5.5em;
+			left: 28em;
+		}
 	}
 
 	> .position-9-icon {
@@ -267,14 +448,27 @@ const CircleTechnology = styled.div`
 		border-radius: 250px;
 		background-color: white;
 		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
-		position: absolute;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		top: 50%;
-		left: 50%;
-		margin: 22em 0px 0px 23em;
-		z-index: 2;
+		z-index: 5;
+
+		position: absolute;
+		top: 11em;
+		left: 43.5em;
+
+		@media (max-width: 650px) {
+			width: 4em;
+			height: 4em;
+			top: 5em;
+			left: 38em;
+		}
+		@media (max-width: 450px) {
+			width: 3em;
+			height: 3em;
+			top: 2em;
+			left: 35.5em;
+		}
 	}
 
 	> .position-10-icon {
@@ -284,14 +478,31 @@ const CircleTechnology = styled.div`
 		border-radius: 250px;
 		background-color: white;
 		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
-		position: absolute;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		top: 50%;
-		left: 50%;
-		margin: 28em 0px 0px 29em;
-		z-index: 2;
+		z-index: 5;
+		position: absolute;
+		top: -17em;
+		left: 48em;
+
+		@media (max-width: 650px) {
+			width: 4em;
+			height: 4em;
+			top: -15em;
+			left: 45em;
+		}
+
+		@media (max-width: 560px) {
+			top: 15em;
+			left: 20em;
+		}
+		@media (max-width: 450px) {
+			width: 3em;
+			height: 3em;
+			top: 7em;
+			left: 19em;
+		}
 	}
 
 	> .position-11-icon {
@@ -301,14 +512,31 @@ const CircleTechnology = styled.div`
 		border-radius: 250px;
 		background-color: white;
 		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
-		position: absolute;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		top: 50%;
-		left: 50%;
-		margin: 13em 0px 0px 35em;
-		z-index: 2;
+		z-index: 5;
+		position: absolute;
+		top: 0.5em;
+		left: 54em;
+
+		@media (max-width: 650px) {
+			width: 4em;
+			height: 4em;
+			top: -2.5em;
+			left: 48em;
+		}
+
+		@media (max-width: 560px) {
+			top: 16em;
+			left: 30em;
+		}
+		@media (max-width: 450px) {
+			width: 3em;
+			height: 3em;
+			top: 10em;
+			left: 28em;
+		}
 	}
 
 	> .position-12-icon {
@@ -318,14 +546,30 @@ const CircleTechnology = styled.div`
 		border-radius: 250px;
 		background-color: white;
 		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
-		position: absolute;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		top: 50%;
-		left: 50%;
-		margin: -4em 0px 0px 27em;
-		z-index: 2;
+		z-index: 5;
+		position: absolute;
+		top: 19em;
+		left: 48em;
+
+		@media (max-width: 650px) {
+			width: 4em;
+			height: 4em;
+			top: 10em;
+			left: 45em;
+		}
+		@media (max-width: 560px) {
+			top: 15em;
+			left: 41em;
+		}
+		@media (max-width: 450px) {
+			width: 3em;
+			height: 3em;
+			top: 7em;
+			left: 37em;
+		}
 	}
 
 	> .footer-position-1-icon {
@@ -335,13 +579,9 @@ const CircleTechnology = styled.div`
 		border-radius: 250px;
 		background-color: white;
 		box-shadow: 1px 1px 12px 1px rgba(0, 0, 255, 0.1);
-		/* position: absolute; */
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		/* top: 50%;
-		left: 50%; */
-		/* margin: 0em 0px 0px 1em; */
 		z-index: 4;
 	}
 

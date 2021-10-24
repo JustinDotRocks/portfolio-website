@@ -216,28 +216,71 @@ const HeroSvgComponent = () => {
 
 export default HeroSvgComponent;
 
-const SVGContainer = styled.div``;
+const SVGContainer = styled.div`
+	position: relative;
+	/* top: -20em;
+	right: -5em; */
+
+	@media (max-width: 1000px) {
+		/* width: 30vw; */
+		margin-right: -25em;
+	}
+`;
 
 const BlueBlobSVGContainer = styled.div`
 	transform: rotate(25deg);
-
+	position: absolute;
+	top: 4em;
+	right: 10em;
+	@media (max-width: 1600px) {
+		right: 16em;
+	}
 	> svg {
-		margin-bottom: -36em;
-		margin-left: 8em;
+		@media (max-width: 1600px) {
+			width: 35em;
+		}
 	}
 `;
 
 const OrangeBlobSVGContainer = styled.div`
 	transform: rotate(-10deg);
+	position: absolute;
+	top: 6em;
+	right: 10em;
+	@media (max-width: 1600px) {
+		right: 16em;
+	}
 
 	> svg {
 		z-index: 2;
+
+		@media (max-width: 1600px) {
+			width: 35em;
+		}
+	}
+`;
+
+const HeroImageContainer = styled.div`
+	width: 45em;
+	> img {
+		z-index: 4;
+
+		position: absolute;
+		top: 15em;
+		right: 26em;
+		@media (max-width: 1600px) {
+			width: 15em;
+		}
 	}
 `;
 
 const ProgrammingIconsContainer = styled.div`
-	height: 5em;
-	width: 5em;
+	@media (max-width: 1600px) {
+		height: 4em;
+		width: 4em;
+	}
+	@media (max-width: 520px) {
+	}
 
 	> #reactIcon {
 		position: absolute;
@@ -245,7 +288,16 @@ const ProgrammingIconsContainer = styled.div`
 		width: 8em;
 		top: 10em;
 		right: 15em;
-		bottom: 0;
+		@media (max-width: 1600px) {
+			height: 4em;
+			width: 4em;
+			top: 13em;
+			right: 20em;
+		}
+		@media (max-width: 1000px) {
+			top: 14em;
+			right: 22em;
+		}
 	}
 
 	> #javaScriptIcon {
@@ -254,7 +306,16 @@ const ProgrammingIconsContainer = styled.div`
 		width: 8em;
 		top: 5em;
 		right: 45em;
-		bottom: 0;
+		@media (max-width: 1600px) {
+			height: 4em;
+			width: 4em;
+			top: 9em;
+			right: 42em;
+		}
+		@media (max-width: 1000px) {
+			top: 11em;
+			right: 40em;
+		}
 	}
 
 	> #cssIcon {
@@ -263,7 +324,16 @@ const ProgrammingIconsContainer = styled.div`
 		width: 8em;
 		top: 25em;
 		right: 50em;
-		bottom: 0;
+		@media (max-width: 1600px) {
+			height: 4em;
+			width: 4em;
+			top: 20em;
+			right: 45em;
+		}
+		@media (max-width: 1000px) {
+			top: 20em;
+			right: 41em;
+		}
 	}
 
 	> #htmlIcon {
@@ -271,8 +341,13 @@ const ProgrammingIconsContainer = styled.div`
 		height: 8em;
 		width: 8em;
 		top: 35em;
-		right: 19em;
-		bottom: 0;
+		right: 17em;
+		@media (max-width: 1600px) {
+			height: 4em;
+			width: 4em;
+			top: 33em;
+			right: 25em;
+		}
 	}
 
 	> #typeScriptIcon {
@@ -281,7 +356,12 @@ const ProgrammingIconsContainer = styled.div`
 		width: 4em;
 		top: 38em;
 		right: 40em;
-		bottom: 0;
+		@media (max-width: 1600px) {
+			height: 4em;
+			width: 4em;
+			top: 32em;
+			right: 40em;
+		}
 	}
 
 	> #graphqlIcon {
@@ -290,7 +370,16 @@ const ProgrammingIconsContainer = styled.div`
 		width: 5em;
 		top: 25em;
 		right: 15em;
-		bottom: 0;
+		@media (max-width: 1600px) {
+			height: 4em;
+			width: 4em;
+			top: 23em;
+			right: 18em;
+		}
+		@media (max-width: 520px) {
+			top: 23em;
+			right: 21em;
+		}
 	}
 
 	> #postgresqlIcon {
@@ -299,14 +388,13 @@ const ProgrammingIconsContainer = styled.div`
 		width: 5em;
 		top: 5em;
 		right: 30em;
-		bottom: 0;
+		@media (max-width: 1600px) {
+			height: 4em;
+			width: 4em;
+		}
+		@media (max-width: 520px) {
+			top: 10em;
+			right: 30em;
+		}
 	}
-`;
-
-const HeroImageContainer = styled.div`
-	position: absolute;
-	height: 20em;
-	width: 20em;
-	top: 15em;
-	right: 25em;
 `;

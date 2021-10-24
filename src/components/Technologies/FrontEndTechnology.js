@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import CircleTechnology from '../utils/CircleTechnologies';
+import CircleTechnology from '../../utils/CircleTechnologies';
+
 import { StyledComponents } from '@styled-icons/simple-icons/StyledComponents';
 import { Redux } from '@styled-icons/boxicons-logos/Redux';
 import { Chakraui } from '@styled-icons/simple-icons/Chakraui';
@@ -22,6 +23,7 @@ const FrontEndTechnology = () => {
 						<div className="second-outer-circle"></div>
 						<div className="second-inner-circle"></div>
 						<div className="inner-circle"></div>
+
 						<div className="blue-circle"></div>
 						<div className="orange-circle"></div>
 						<JavascriptIconContainer className="position-1-icon" />
@@ -42,16 +44,13 @@ const FrontEndTechnology = () => {
 						<strong>Frontend</strong> Technologies
 					</h2>
 					<p>
-						I'm a fullstack web developer living in Newfoundland Canada. My
-						developer journey navigated me through the parallels of html, css,
-						scss and javaScript. I shortly then after, picked up the ReactJS
-						library and pivoted into styled components from using standard css
-						and scss. I steered towards Redux and Redux Toolkit for state
-						handling, but veered in the direction of GraphQL soon after.
-						TypeScript was my next challenge, while I entered with caution, into
-						the backstreets of PostgreSQL for database management. I used
-						Apollo, TypeORM, node.js and next.js along the way. Redis was used
-						to store my cookies, and I used Chakra (styling) for the first time.
+						Perfer to use JavaScript with React but capable of using TypeScript
+						or Html.
+						<br />
+						Main styling method is Styled-components. Able to style with Css,
+						Sass and ChakraUi.
+						<br />
+						Redux Toolkit for state manupliation. <br />
 					</p>
 				</FrontendTextContainer>
 			</FrontendContainer>
@@ -62,19 +61,79 @@ const FrontEndTechnology = () => {
 export default FrontEndTechnology;
 
 const FrontendContainer = styled.div`
-	background: linear-gradient(to left, white, rgba(242, 100, 25));
+	/* background: linear-gradient(to left, white, rgba(242, 100, 25)); */
 	display: flex;
-	margin-top: 5rem;
 	align-items: center;
+	margin: 1.5em;
+	height: 100vh;
+
+	@media (max-width: 1150px) {
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		height: 150vh;
+	}
+	@media (max-width: 400px) {
+		height: 90vh;
+	}
 `;
 
 const FrontendTextContainer = styled.div`
-	margin: 2em 10em 2em 1em;
+	/* margin: 0em 10em 2em 1em; */
+	margin: 0em 5em 0em 5em;
 	flex: 0.4;
+	@media (max-width: 1550px) {
+		margin: 0em 2em 0em 2em;
+	}
+	@media (max-width: 1250px) {
+		margin: 0em -1em 0em 2em;
+	}
+	@media (max-width: 1150px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0em 0em 2em 0em;
+	}
+	@media (max-width: 750px) {
+		margin-top: 2em;
+	}
+	@media (max-width: 650px) {
+		margin: 0em 0em 2em 0em;
+	}
+	@media (max-width: 420px) {
+		margin: 0em 0em 2em 0em;
+	}
+	@media (max-width: 380px) {
+		margin: 0em 0em 2em 0em;
+	}
 
 	> h2 {
 		font-size: 4em;
 		color: #33658a;
+		@media (max-width: 1150px) {
+			font-size: 3.5em;
+			margin: 1em 0em 0.5em 0em;
+		}
+		@media (max-width: 850px) {
+			font-size: 3em;
+		}
+
+		@media (max-width: 650px) {
+			font-size: 2.75em;
+			margin: 3em 0em 0.5em 0em;
+		}
+		@media (max-width: 550px) {
+			/* font-size: 2em; */
+		}
+		@media (max-width: 420px) {
+			/* font-size: 1.8em; */
+			margin-top: 2em;
+		}
+		@media (max-width: 400px) {
+			/* font-size: 1.5em; */
+			margin-top: 5em;
+		}
 
 		> strong {
 			color: #f26419;
@@ -82,14 +141,41 @@ const FrontendTextContainer = styled.div`
 	}
 
 	> p {
-		font-size: 1.2em;
+		font-size: 1.5em;
+		color: #33658a;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		@media (max-width: 1150px) {
+			width: 60vw;
+		}
+		@media (max-width: 450px) {
+			font-size: 1.3em;
+		}
 	}
 `;
 
 const FrontEndCircleContainer = styled.div`
 	flex: 0.6;
-	margin: 5em 30em 5em -20em;
-	height: 50vh;
+
+	@media (max-width: 1550px) {
+		margin: 0em 5em 0em -12em;
+	}
+
+	@media (max-width: 1250px) {
+		margin: 0em 6em 0em -14em;
+	}
+	@media (max-width: 1150px) {
+		margin: 20em 35em 10em -35em;
+	}
+
+	@media (max-width: 750px) {
+		margin: 20em 35em 0em -30em;
+	}
+	@media (max-width: 650px) {
+		margin: 20em 35em 0em -28em;
+	}
+	@media (max-width: 420px) {
+		margin: 15em 31em 5em -28em;
+	}
 `;
 
 const StyledComponentsIconContainer = styled(StyledComponents)`
@@ -110,6 +196,9 @@ const ChakrauiIconContainer = styled.div`
 const ChakrauiIcon = styled(Chakraui)`
 	${Chakraui} {
 		color: #2cbcb4;
+		@media (max-width: 400px) {
+			width: 2.5em;
+		}
 	}
 `;
 
@@ -132,8 +221,12 @@ const JavascriptIconContainer = styled(Javascript)`
 `;
 
 const TypescriptIconContainer = styled(Typescript)`
+	width: 2em;
+	height: 2em;
 	${Typescript} {
 		color: #047bcc;
+		width: 1em;
+		height: 1em;
 	}
 `;
 
